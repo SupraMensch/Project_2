@@ -2,23 +2,15 @@
 
 //  Project_2
 
-//
-//
-//  Sort an Array (20 points)
-//
-//  Create an array of integers that contains the following:
-//
-//  int[] numbers = { 12, 193, 56, 74, 9, 34, 165, 102, 154, 63, 19, 49 }
-//
-//  In your main program, sort the array and display all of the elements in sorted order.
-
-
+//  This program creates an array and sorts it
 
 package project_2;
 
 
-public class Project_2 {
+public class Project_2
+{
 
+    //  Main method intializes array and colles arraySort Method then loops a display 
     public static void main(String[] args)
     {
         int[] numbers = { 12, 193, 56, 74, 9, 34, 165, 102, 154, 63, 19, 49 };
@@ -28,21 +20,18 @@ public class Project_2 {
         System.out.println("The sorted numbers are:");
         for (int i = 0; i < numbers.length; i++)
             System.out.print(numbers[i] + " ");
-        System.out.println();
-        
     }
     
-    
-    
+    // sort Method   
     public static void arraySort(int[] numbers)
    {
-      int startScan, index, minIndex, minValue;
+      int numScan, index, minIndex, minValue;
 
-      for (startScan = 0; startScan < (numbers.length-1); startScan++)
+      for (numScan = 0; numScan < (numbers.length-1); numScan++)
       {
-         minIndex = startScan;
-         minValue = numbers[startScan];
-         for(index = startScan + 1; index < numbers.length; index++)
+         minIndex = numScan;
+         minValue = numbers[numScan];
+         for(index = numScan + 1; index < numbers.length; index++)
          {
             if (numbers[index] < minValue)
             {
@@ -50,8 +39,8 @@ public class Project_2 {
                minIndex = index;
             }
          }
-         numbers[minIndex] = numbers[startScan];
-         numbers[startScan] = minValue;
+         numbers[minIndex] = numbers[numScan];
+         numbers[numScan] = minValue;
       }
    }
 }
